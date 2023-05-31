@@ -1,0 +1,25 @@
+[
+  {
+  "codigo": 82,
+    "nome": "Luiiz",
+    "sobreNome": "Gabriel",
+    "dataNascimento": "28-03-2003",
+    "telefone": "41992771021",
+    "endereco": "Luiz Tramontin",
+    "cidade": "Curitiba",
+    "estado": "Parana",
+    "status": "Ativo"
+  },
+
+  {
+    "codigo": 83,
+    "nome": "Luiz",
+    "sobreNome": "Gabriel",
+    "dataNascimento": "28-03-2003",
+    "telefone": "41992771021",
+    "endereco": "Luiz Tramontin",
+    "cidade": "Curitiba",
+    "estado": "Parana",
+    "status": "Ativo"
+  }
+]
