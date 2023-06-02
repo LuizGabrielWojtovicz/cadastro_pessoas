@@ -7,6 +7,7 @@ router.post('/', cadastroController.salvar);
 router.get('/:id', cadastroController.buscarPorId);
 router.put('/:id', cadastroController.atualizar);
 router.delete('/:id', cadastroController.excluir);
-router.put('/:id/profile-image', cadastroController.atualizarImagem);
+router.get('/:id/profile-image', cadastroController.getProfile);
+router.put('/:id/profile-image', express.raw(), cadastroController.atualizarImagem);
 
 module.exports = router;

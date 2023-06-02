@@ -18,7 +18,9 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(bodyParser.raw({type: 'image/jpeg'}))
+app.use(express.raw({type: 'image/jpeg'}))
+
+console.log(express.raw)
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
