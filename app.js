@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+require('./database/mongodb')
+
 var app = express();
 
 // view engine setup
@@ -16,6 +18,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.raw({type: 'image/jpeg'}))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

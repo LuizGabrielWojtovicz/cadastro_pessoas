@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const cadastroController = require('../controllers/cadastroController');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', cadastroController.listar);
+router.post('/', cadastroController.salvar);
+router.get('/:id', cadastroController.buscarPorId);
+router.put('/:id', cadastroController.atualizar);
+router.delete('/:id', cadastroController.excluir);
+router.put('/:id/profile-image', cadastroController.atualizarImagem);
 
 module.exports = router;

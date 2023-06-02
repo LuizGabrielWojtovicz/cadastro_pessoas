@@ -5,6 +5,7 @@ const cadastroSchema = new mongoose.Schema({
     nome: String,
     sobreNome: String,
     dataNascimento: String,
+    imagemPerfil: Buffer,
     telefone: String,
     endereco: String,
     cidade: String,

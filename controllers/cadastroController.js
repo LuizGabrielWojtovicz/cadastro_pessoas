@@ -1,4 +1,4 @@
-const cadastroModel = require('../cadastros/cadastroModel');
+const cadastroModel = require('../models/cadastroModel');
 
 class CadastroController {
     async salvar(req, res) {
@@ -32,6 +32,13 @@ class CadastroController {
         const _codigo = String((await cadastroModel.findOne({ 'codigo': codigo }))._codigo);
         await cadastroModel.findByIdAndRemove(String(_codigo));
         res.status(200).send();
+    }
+
+    async atualizarImagem(req, res) {
+        const user = await cadastroModel.findById(req.params.id)
+
+        user.imagemPerfil = req.body
+        await user.save()
     }
 }
 

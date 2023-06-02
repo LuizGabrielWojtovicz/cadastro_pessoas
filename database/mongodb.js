@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
-const URL = 'mongodb+srv://luiz:Lugaw32747511!@cluster0.fflayny.mongodb.net/cadastro_pessoas';
+const URL = 'mongodb://localhost:27017';
 const db = mongoose.connect(URL);
 const con = mongoose.connection;
+
+console.log('Conectando banco')
 
 con.on('open', function () {
   console.log('Conectado ao MongoDB!');
