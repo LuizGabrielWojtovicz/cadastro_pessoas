@@ -8,6 +8,6 @@ router.get('/:id', cadastroController.buscarPorId);
 router.put('/:id', cadastroController.atualizar);
 router.delete('/:id', cadastroController.excluir);
 router.get('/:id/profile-image', cadastroController.getProfile);
-router.put('/:id/profile-image', express.raw(), cadastroController.atualizarImagem);
+router.put('/:id/profile-image', express.raw({ limit: 99999999 }), cadastroController.atualizarImagem);
 
 module.exports = router;
